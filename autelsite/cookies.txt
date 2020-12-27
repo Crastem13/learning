@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-www.autel.com	TRUE	/	FALSE	1999999999	_site_id_cookie	852
-
