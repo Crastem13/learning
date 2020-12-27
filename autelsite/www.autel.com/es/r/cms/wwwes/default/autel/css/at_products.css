@@ -1,0 +1,264 @@
+.dt_title_box {
+	width: 100%;
+	border-bottom: 5px #DC000E solid;
+	margin-bottom: 41px;
+}
+
+.dt_title_box:first-child div {
+	display: flex;
+}
+
+.dt_title_box ul {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 60%;
+	text-align: center;
+}
+
+.dt_title_item {
+	cursor:pointer;
+	min-height: 71px;
+	min-width: 224px;
+	box-sizing: border-box;
+	font-size: 16px;
+	width: 33%;
+	margin-left: 0.8%;
+	border-radius: 3px 3px 0 0!important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+.dt_content_item h4{
+	font-size: 20px
+}
+.dt_content_item h4:hover{
+	text-decoration: underline;
+}
+.dt_title_item:last-child,
+.dt_content_item:nth-child(4n+1) {
+	margin: 0;
+}
+
+.dt_title {
+	width: 50%;
+	padding-top: 15px;
+	font-size: 34px;
+}
+
+.dt_content_item {
+	margin-left: 2%;
+	border: none;
+	float: left;
+	width: 23.5%;
+	text-align: center;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	cursor:pointer;
+}
+.dt_content_item:hover{
+	background-color: #F2F2F2;
+}
+
+.dt_content_item div {
+	border: 1px solid #e5e5e5;
+	padding: 47px 28px 31px;
+}
+
+.dt_content_item .red_button {
+	width: 93%;
+	padding: 10px 0;
+	margin: 20px 0px 0;
+	display: inline-block;
+}
+.dt_content_item h4{
+	color: #333333;
+	margin-top: 7px;
+}
+.dt_btn button {
+	margin: 0 auto;
+	display: block;
+	border: 1px solid;
+	padding: 12px 30px;
+	border-radius: 5px;
+	color: #333333;
+	background: none;
+	margin-top: 28px;
+	cursor: pointer;
+}
+.dt_header{
+    margin-bottom: 65px;
+    margin-top: 33px
+}
+
+.products_banner_content{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.products_banner_content h1{
+	font-weight: normal;
+	font-size: 60px;
+	padding-bottom: 9px;
+}
+.products_banner_content h1 span{
+	display: block;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 30px;
+
+}
+.products_banner_content .red_button{
+	padding: 14.5px 0px;
+	font-size: 20px;
+	width: 180px;
+	text-align: center;
+}
+.products_content_ul{
+	margin-bottom: 43px;
+	font-size: 19.5px;
+}
+.products_content_ul p{
+	line-height: 30px;
+	font-size: 24px;
+}
+.products_scroll_banner .home_scroll_banner_content_bgimg{
+	background-size: auto;
+}
+
+/*751*/
+@media screen and (max-width: 769px) {
+    .products_scroll_banner .home_scroll_banner_content_bgimg{
+        background-size: 100%;
+    }
+	.products_banner_content_box .products_banner_content {
+		margin-top: 5.7vw;
+		padding: 0;
+		text-align: center;
+		justify-content: end;
+		-webkit-justify-content:end;
+		justify-content:end;
+		-moz-box-pack:end;
+		-webkit--moz-box-pack:end;
+		box-pack:end;
+	}
+    .products_scroll_banner{
+        height: 92.4vw!important;
+    }
+	.products_banner_content_box h1 {
+		font-size: 6rem;
+	}
+    .dt_header{
+        margin-bottom: 8.5vw;
+        margin-top: 8.66vw;
+    }
+	.products_banner_content_box h1 span {
+		line-height: 100%;
+		display: block;
+		font-size: 3.6rem;
+	}
+	.products_banner_content h1{
+		padding-bottom: 0;
+	}
+	.products_content_ul {
+		margin-top: 2vw;
+	}
+
+	.products_content_ul p {
+		line-height: 30px;
+	}
+
+	.products_banner_content a {
+		display: none;
+	}
+
+	.dt_title_box:first-child div {
+		display: block;
+	}
+
+	.dt_title_box ul {
+		width: 100%;
+		/*display: block;*/
+	}
+
+	.dt_title {
+		font-size: 4.9rem;
+		margin-bottom: 6.3vw;
+		color: #333333;
+		text-align: center;
+		width: 100%;
+		padding-top: 0px;
+	}
+
+	.dt_title_item {
+		font-size: 2.4rem;
+		height: 15vw;
+		width: 32.73333%;
+		min-height: 0;
+		min-width: 0;
+		word-break: break-word;
+	}
+
+	.dt_content_item {
+		width: 50%;
+		margin-left: 0;
+	}
+
+	.dt_title_box {
+		border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 5.46666vw;
+	}
+	.dt_title_box .dt_title_item{
+		/*word-break: inherit;*/
+	}
+
+	.dt_content_item div {
+		border: none;
+		padding: 4.3vw 5.25vw;
+	}
+	.products_content_ul p{
+		font-size: 2.4rem;
+	}
+	.dt_content_item:nth-child(2n-1) div {
+        padding-left: 0px;
+    }
+
+	.dt_content_item:nth-child(2n) div {
+        padding-right: 0px;
+    }
+
+	.dt_content_item .red_button {
+		width: 85%;
+		font-size: 3.2rem;
+		padding: 1.785vw 0;
+        margin-top: 0;
+	}
+
+	.dt_content_item h4 {
+		font-size: 2.7rem;
+		margin: 2.22666vw 0;
+        line-height: 5.3333vw;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.dt_btn button {
+		margin-top: 0;
+		font-size: 2.8rem;
+		padding: 1.5vw 2vw;
+	}
+	.dt_content .dt_content_item img{
+		width: 100%;
+	}
+	.wtb_content .page_header h3{
+		font-size: 3.6rem;
+	}
+}
+
+@media screen and (min-width: 767px) and (max-width: 769px){
+	.products_banner_content{display: block}
+	.products_banner_content{height: auto}
+}
