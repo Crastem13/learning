@@ -1,6 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-pro.autel.com	TRUE	/	FALSE	1999999999	JSESSIONID	494A224944D701F043D181F5934EB303
-autel.com	TRUE	/	FALSE	1999999999	loginout	1
-www.autel.com	TRUE	/	FALSE	1999999999	_site_id_cookie	852
-
