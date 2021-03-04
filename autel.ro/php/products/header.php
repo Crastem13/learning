@@ -3,7 +3,7 @@
     <header id="topnav" class="defaultscroll sticky">
         <div class="container">
             <div>
-                <a class="logo" href="index.php">
+                <a class="logo" href="../../index.php">
                     <img src="../../img/logo.png" class="l-dark" height="60" alt="">
                     <img src="../../img/logo.png" class="l-light" height="60" alt="">
                 </a>
