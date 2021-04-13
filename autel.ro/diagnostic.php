@@ -168,6 +168,20 @@
                             <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
                                 <div class="card shop-list border-0 position-relative overflow-hidden">
                                     <div class="shop-image position-relative overflow-hidden rounded shadow">
+                                        <a href="products/diagnoza/d012.php"><img src="img/products/02-2021/d012.png" class="img-fluid" alt=""></a>
+                                    </div>
+                                    <div class="card-body content pt-4 p-2">
+                                        <a href="products/diagnoza/d012.php" class="text-dark product-name h6">MaxiCOM MK808BT</a>
+                                        <div class="d-flex justify-content-between mt-1">
+                                            <h6 class="text-muted small font-italic mb-0 mt-1"></h6>
+                                            <a href="products/diagnoza/d012.php" class="text-muted readmore">Detalii <i class="mdi mdi-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                                <div class="card shop-list border-0 position-relative overflow-hidden">
+                                    <div class="shop-image position-relative overflow-hidden rounded shadow">
                                         <a href="products/diagnoza/d008.php"><img src="img/products/02-2021/d006.png" class="img-fluid" alt=""></a>
                                     </div>
                                     <div class="card-body content pt-4 p-2">
@@ -189,6 +203,20 @@
                                         <div class="d-flex justify-content-between mt-1">
                                             <h6 class="text-muted small font-italic mb-0 mt-1"></h6>
                                             <a href="products/diagnoza/d005.php" class="text-muted readmore">Detalii <i class="mdi mdi-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                                <div class="card shop-list border-0 position-relative overflow-hidden">
+                                    <div class="shop-image position-relative overflow-hidden rounded shadow">
+                                        <a href="products/diagnoza/d013.php"><img src="img/products/02-2021/d013.jpg" class="img-fluid" alt=""></a>
+                                    </div>
+                                    <div class="card-body content pt-4 p-2">
+                                        <a href="products/diagnoza/d013.php" class="text-dark product-name h6">MaxiPRO MP808K</a>
+                                        <div class="d-flex justify-content-between mt-1">
+                                            <h6 class="text-muted small font-italic mb-0 mt-1"></h6>
+                                            <a href="products/diagnoza/d013.php" class="text-muted readmore">Detalii <i class="mdi mdi-chevron-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
