@@ -99,57 +99,8 @@
             <!-- TODO make form work -->
             <div class="container mt-100 mt-60">
                 <div class="row align-items-center">
-                    <div class="col-lg-7 col-md-6 pt-2 pt-sm-0 order-2 order-md-1">
-                        <div class="card shadow rounded border-0">
-                            <div class="card-body py-5">
-                                <h4 class="card-title">Scrie-ne !</h4>
-                                <div class="custom-form mt-4">
-                                    <div id="message"></div>
-                                    <form method="post" action="php/contact.php" name="contact-form" id="contact-form">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group position-relative">
-                                                    <label>Nume <span class="text-danger">*</span></label>
-                                                    <i data-feather="user" class="fea icon-sm icons"></i>
-                                                    <input name="name" id="name" type="text" class="form-control pl-5" placeholder="Numele tau :">
-                                                </div>
-                                            </div><!--end col-->
-                                            <div class="col-md-6">
-                                                <div class="form-group position-relative">
-                                                    <label>Email <span class="text-danger">*</span></label>
-                                                    <i data-feather="mail" class="fea icon-sm icons"></i>
-                                                    <input name="email" id="email" type="email" class="form-control pl-5" placeholder="Emailul tau :">
-                                                </div> 
-                                            </div><!--end col-->
-                                            <div class="col-md-12">
-                                                <div class="form-group position-relative">
-                                                    <label>Subiect</label>
-                                                    <i data-feather="book" class="fea icon-sm icons"></i>
-                                                    <input name="subject" id="subject" type="text" class="form-control pl-5" placeholder="Subiect">
-                                                </div>                                                                               
-                                            </div><!--end col-->
-                                            <div class="col-md-12">
-                                                <div class="form-group position-relative">
-                                                    <label>Mesaj</label>
-                                                    <i data-feather="message-circle" class="fea icon-sm icons"></i>
-                                                    <textarea name="comments" id="comments" rows="4" class="form-control pl-5" placeholder="Mesajul tau :"></textarea>
-                                                </div>
-                                            </div>
-                                        </div><!--end row-->
-                                        <div class="row">
-                                            <div class="col-sm-12 text-center">
-                                                <input type="submit" id="submit" name="send" class="submitBnt btn btn-primary btn-block" value="Send Message">
-                                                <div id="simple-msg"></div>
-                                            </div><!--end col-->
-                                        </div><!--end row-->
-                                    </form><!--end form--> 
-                                </div><!--end custom-form-->
-                            </div>
-                        </div>
-                    </div><!--end col-->
-
-                    <div class="col-lg-5 col-md-6 order-1 order-md-2">
-                        <div class="card border-0">
+                    <div class="col-lg-12">
+                        <div class="card border-0 align-items-center">
                             <div class="card-body p-0">
                                 <img src="img/certificates/cert_1.jpg" class="img-fluid" alt="" width="400" height="700">
                             </div>
