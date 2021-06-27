@@ -63,12 +63,16 @@
 
                     <div class="col-md-7 mt-4 mt-sm-0 pt-2 pt-sm-0">
                         <div class="section-title ml-md-4">
-                            <h4 class="title">MaxiIM IM508</h4>                            
+                            <h4 class="title">MaxiIM IM508</h4>   
+                            <h5 class="mt-4 py-2">Oferta : </h5>  
+                            <p class="text-muted">Autel MaxiIM IM508-5000lei + XP400PRO-2800lei +APB112-1200lei + G-BOX2-600lei Set 
+                            complet Pret promotional 9000 lei Super Oferta! economie de 600 lei - oferta limitata! Produs in stoc - Livrare 
+                            imediata!</p>                       
                             <h5 class="mt-4 py-2">Descriere :</h5>
                             <p class="text-muted">MaxiIM IM508 este un dispozitiv de imobilizare și de programare rapid, 
                                 ușor de utilizat și ultraportabil. Tableta cu ecran tactil bazată pe Android are procesor 
-                                quad-core puternic, design intuitiv și interfață directă. Echipat cu programatorul de chei 
-                                XP200, IM508 este capabil să ofere funcții de service extraordinare pentru sistemul de 
+                                quad-core puternic, design intuitiv și interfață directă. IM508 este capabil să ofere funcții 
+                                de service extraordinare pentru sistemul de 
                                 imobilizare. Împreună cu capacitatea de a diagnostica rapid toate modulele majorității 
                                 mărcilor și modelelor de pe piață, IM508 vă oferă funcții speciale superioare. IM508 este 
                                 soluția perfectă pentru magazine și tehnicieni care solicită servicii IMMO și de diagnostic 
