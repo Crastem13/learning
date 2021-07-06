@@ -65,9 +65,9 @@
                         <div class="section-title ml-md-4">
                             <h4 class="title">MaxiIM IM508</h4>   
                             <h5 class="mt-4 py-2">Oferta : </h5>  
-                            <p class="text-muted">Autel MaxiIM IM508-5000lei + XP400PRO-2800lei +APB112-1200lei + G-BOX2-600lei Set 
-                            complet Pret promotional 9000 lei Super Oferta! economie de 600 lei - oferta limitata! Produs in stoc - Livrare 
-                            imediata!</p>                       
+                            <p class="text-muted">Autel MaxiIM IM508-5000lei + XP400PRO-2800lei +APB112-1200lei + G-BOX2-600lei. Set 
+                            complet. Preț promoțional 8500 lei. Super ofertă! Economisiți 1100 lei! Ofertă limitată! Produs în stoc - Livrare 
+                            imediată!</p>                       
                             <h5 class="mt-4 py-2">Descriere :</h5>
                             <p class="text-muted">MaxiIM IM508 este un dispozitiv de imobilizare și de programare rapid, 
                                 ușor de utilizat și ultraportabil. Tableta cu ecran tactil bazată pe Android are procesor 
