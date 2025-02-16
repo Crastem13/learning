@@ -1,7 +1,19 @@
 This will be my environment for learning.
 
-- I will first start with the basics of Python and then move on to more advanced topics.
-- All the code is written in Visual Studio Code and executed on my local machine, in terminal.
-- I use Copilot for writing code snippets.
-- I try to push all the modifications to GitHub as soon as I make them.
-- I will also try to write a blog post on the topics I learn, to solidify my understanding.
+Learning Python:
+
+Objective:
+- To learn Python from scratch.
+- Enhance the level of difficulty as I progress.
+- Learn to write clean and efficient code with best practices in mind.
+
+What I use:
+- Python 3.9.7 for learning.
+- Visual Studio Code as my code editor.
+- Copilot for writing code snippets.
+- GitHub for version control.
+- Copilot Edits for code reviews and help.
+
+How I learn:
+- I use prompt-based problems to solve, which are given by Copilot.
+- I write theory notes to understand the concepts, which are given by Copilot aswell.

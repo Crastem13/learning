@@ -1,0 +1,77 @@
+    Functions
+
+Definition:
+A function is a block of organized, reusable code that performs a single, related action.
+Functions provide better modularity for your application and a high degree of code
+reusability. Python provides many built-in functions like print(), but you can also create
+your ownb functions.
+
+Syntax:
+You define a function using the 'def' keyword, followed by the function name and parentheses 
+'()'. Inside the parentheses, you can specify parameters. The function body is indented.
+
+Example:
+def greet(name):
+    """This function greets the person passed in as a parameter."""
+    print(f"Hello, {name}!")
+
+    Calling a Function
+To call a function, use the function name followed by parantheses, including any necessary 
+arguments.
+
+Example:
+greet("Alice")
+
+    Return Statement
+Functions can return a value using the 'return' statement.
+
+Example:
+def add(a, b):
+    """This function returns the sum of two numbers."""
+    return a + b
+
+result = add(3, 5)
+print
+
+    Parameters and Arguments
+
+Parameters:
+    Variables listed inside the parantheses in the function definition.
+Arguments:
+    Values passed into the function when it is called.
+
+    Types of Arguments
+
+Positional Arguments:
+    Arguments that are passed in the order they are defined.
+Keyword Arguments:
+    Arguments that are passed by explicitly stating the parameter name.
+
+Example:
+def describe_pet(animal_type, pet_name):
+    """Display information about a pet."""
+    print(f"\nI have a {animal_type}.")
+    print(f"My {animal_type}'s name is {pet_name}.")
+
+# Positional Arguments
+describe_pet('hamster', 'Harry')
+
+# Keyword Arguments
+describe_pet(animal_type='dog', pet_name='Rufus'
+
+Small Example:
+
+def multiply(a, b):
+    """This function multiplies two numbers."""
+    return a * b
+
+# Calling the function with positional arguments
+result1 = multiply(4, 5)
+print(result1)
+
+# Calling the function with keyword arguments
+result2 = multiply(a=7, b=3)
+print(result2)
+
+This script defines a function that multiplies two numbers and demonstrates calling it with 
+both positional and keyword arguments.

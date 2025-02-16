@@ -1,0 +1,36 @@
+    Variables
+
+Definition: A variable is a reserved memory location to store values. In Python, you do not need to
+declare a variable, unlike other programming languages.
+
+Assignment: You assign a value to a variable using the equals sign '='.
+
+    Data types
+
+Numeric Types:
+- int: Integer
+- float: Floating point number
+- complex: Complex number (e.g., z = 1 + 2j)
+
+Text Type:
+- str: String
+
+Sequence Types:
+- list: Ordered collection
+- tuple: Ordered, immutable collection
+- range: Sequence of numbers
+
+Mapping Type:
+- dict: Dictionary
+
+Set Types:
+- set: Unordered collection of unique elements
+- frozenset: Immutable version of set
+
+Boolean Type:
+- bool: Boolean value
+
+Binary Types:
+- bytes: Immutable sequence of bytes
+- bytearray: Mutable sequence of bytes
+- memoryview: Memory view object

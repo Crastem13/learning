@@ -1,10 +1,10 @@
 # Anagram Checker
 #
-# Description:
+## Description:
 # An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 
 # typically using all the original letters exactly once.
 #
-# Objective : Create a program that checks if two strings are anagrams of each other.
+## Objective : Create a program that checks if two strings are anagrams of each other.
 #
 # Requirements:
 # 1. Create a function called is_anagram that takes two parameters str1 and str2.
