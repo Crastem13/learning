@@ -1,0 +1,94 @@
+    Inheritance
+
+Definition
+    Inheritance allows a class (called the child class) to inherit attributes and 
+methods from another class (called the parent class). This promotes code reuse and
+can make a program easier to maintain.
+
+Syntax
+    You define a child class by specifying the parent class in parentheses after 
+the child class name.
+
+Example:
+class ParentClass:
+    """A simple parent class."""
+
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"Hello, my name is {self.name}.")
+
+class ChildClass(ParentClass):
+    """A simple child class inheriting from ParentClass."""
+
+    def __init__(self, name, age):
+        super().__init__(name)  # Initialize the parent class attributes
+        self.age = age
+
+    def display_age(self):
+        print(f"I am {self.age} years old.")
+
+Using Inheritance
+    You create an instance of the child class and call its methods, including those 
+inherited from the parent class.
+
+Example:
+# Creating an instance of ChildClass
+child = ChildClass("Alice", 10)
+
+# Accessing methods from both ParentClass and ChildClass
+child.greet()  # Inherited method
+child.display_age()  # Child class method
+
+Method Overriding
+    The child class cand override methods from the parent class. To do this, define 
+a method in the child class with the same name as the method in the parent class.
+
+Example:
+class ParentClass:
+    def greet(self):
+        print("Hello from the parent class.")
+
+class ChildClass(ParentClass):
+    def greet(self):
+        print("Hello from the child class.")
+
+# Creating an instance of ChildClass
+child = ChildClass()
+child.greet()  # Calls the overridden method in the child class
+
+
+Small example:
+
+class Animal:
+    """A simple parent class representing an animal."""
+
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        print(f"{self.name} makes a sound.")
+
+class Dog(Animal):
+    """A child class inheriting from Animal."""
+
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+    def make_sound(self):
+        print(f"{self.name} barks.")
+
+    def display_breed(self):
+        print(f"{self.name} is a {self.breed}.")
+
+# Creating an instance of Dog
+my_dog = Dog("Buddy", "Golden Retriever")
+
+# Accessing methods
+my_dog.make_sound()  # Overridden method
+my_dog.display_breed()  # Child class method
+
+    This script defines an Animal parent class and a Dog child class that inherits 
+from Animal, demonstrating method overriding.

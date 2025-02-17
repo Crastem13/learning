@@ -1,0 +1,80 @@
+    Object-Oriented Programming (OOP)
+Python supports Object-Oriented Programming (OOP) that allows you to create classes 
+and objects. OOP is a programming paradigm based on the concept of "objects" which 
+can contain data and code to manipulate the data.
+
+    Classes
+A class is a blueprint for creating objects. It defines a set of attributes and methods 
+that the objects created from the class can have.
+
+    Objects
+An object is an instance of a class. It has a state (attributes or properties) and 
+behavior (methods).
+
+    Defining a Class
+You define a class using the 'class' keyword, followed by the class name and a colon.
+
+Example:
+
+class Dog:
+    """A simple class representing a dog."""
+
+    def __init__(self, name, age):
+        """Initialize the name and age attributes."""
+        self.name = name
+        self.age = age
+
+    def sit(self):
+        """Simulate the dog sitting."""
+        print(f"{self.name} is sitting.")
+
+    def roll_over(self):
+        """Simulate the dog rolling over."""
+        print(f"{self.name} rolled over.")
+
+    Creating an object
+You create an object (instance) of a class by calling the class name as if it were a function.
+
+Example:
+
+my_dog = Dog("Rex", 5)
+
+# Accessing attributes
+print(my_dog.name)
+print(my_dog.age)
+
+# Calling methods
+my_dog.sit()
+my_dog.roll_over()
+
+
+    Small Example:
+
+class Car:
+    """A simple class representing a car."""
+
+    def __init__(self, make, model, year):
+        """Initialize the make, model, and year attributes."""
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def start(self):
+        """Simulate starting the car."""
+        print(f"The {self.year} {self.make} {self.model} is starting.")
+
+    def stop(self):
+        """Simulate stopping the car."""
+        print(f"The {self.year} {self.make} {self.model} is stopping.")
+
+# Creating an object
+my_car = Car("Toyota", "Corolla", 2022)
+
+# Accessing attributes
+print(my_car.make)
+print(my_car.model)
+print(my_car.year)
+
+# Calling methods
+my_car.start()
+my_car.stop()

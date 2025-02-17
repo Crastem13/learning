@@ -1,0 +1,71 @@
+Modules
+    A module is a file containing Python definitions and statements. It helps organize
+related functions, classes, and variables into a single file. You can import a module 
+into another Python script using the 'import' statement.
+
+Example: Suppose you have a file named my_module.py with the following content:
+# my_module.py
+def greet(name):
+    return f"Hello, {name}!"
+
+def add(a, b):
+    return a + b
+
+You can import and use this module in another script:
+# main.py
+import my_module
+
+print(my_module.greet("Alice"))
+print(my_module.add(3, 5))
+
+Packages
+A package is a collection of related modules organized in directories. Each package 
+contains a special '__init__.py' file to indicate that the directory is a package. This
+file can be empty or contain package initialization code.
+
+Example: Suppose you have the following package structure:
+my_package/
+    __init__.py
+    module1.py
+    module2.py
+
+You can import and use modules from this package:
+# module1.py
+def greet(name):
+    return f"Hello, {name}!"
+
+# module2.py
+def add(a, b):
+    return a + b
+
+# main.py
+from my_package import module1, module2
+
+print(module1.greet("Alice"))
+print(module2.add(3, 5))
+
+    Small Example:
+
+Here's a small example demonstrating modules and packages:
+   
+    1. Create a file named math_operations.py:
+
+# math_operations.py
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "Division by zero!"
+    return a / b
+
+    2. Create a main script named 'main.py':
+
+# main.py
+import math_operations
+
+print(math_operations.multiply(6, 7))
+print(math_operations.divide(42, 7))
+
+Run the main.py script to see the output of the functions defined in math_operations.py. 
+This demonstrates how to create and use modules in Python.
