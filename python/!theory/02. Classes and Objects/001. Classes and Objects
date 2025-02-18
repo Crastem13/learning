@@ -3,14 +3,17 @@ Python supports Object-Oriented Programming (OOP) that allows you to create clas
 and objects. OOP is a programming paradigm based on the concept of "objects" which 
 can contain data and code to manipulate the data.
 
+#---------------------------#
     Classes
 A class is a blueprint for creating objects. It defines a set of attributes and methods 
 that the objects created from the class can have.
 
+#---------------------------#
     Objects
 An object is an instance of a class. It has a state (attributes or properties) and 
 behavior (methods).
 
+#---------------------------#
     Defining a Class
 You define a class using the 'class' keyword, followed by the class name and a colon.
 
@@ -32,6 +35,7 @@ class Dog:
         """Simulate the dog rolling over."""
         print(f"{self.name} rolled over.")
 
+#---------------------------#
     Creating an object
 You create an object (instance) of a class by calling the class name as if it were a function.
 
@@ -47,7 +51,7 @@ print(my_dog.age)
 my_dog.sit()
 my_dog.roll_over()
 
-
+#---------------------------#
     Small Example:
 
 class Car:

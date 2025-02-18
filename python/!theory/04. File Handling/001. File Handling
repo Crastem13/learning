@@ -1,5 +1,6 @@
     File Handling
 
+#---------------------------#
 Opening a file 
     To open a file in Python, you use the 'open()' function, which returns a file object.
 You can specify the mode in which the file is opened:
@@ -15,7 +16,8 @@ Example:
 
 file = open("example.txt", "r")
 
-- Reading a File
+#---------------------------#
+Reading a File
     You can read contents of a file using methods such as 'read()', 'readline()', and 
 'readlines()'
 
@@ -37,7 +39,8 @@ file.seek(0)
 lines = file.readlines()
 print(lines)
 
-- Writing to a File
+#---------------------------#
+Writing to a File
     You can write to a file using the 'write()' method or the 'writelines()' method for 
 writing multiple lines.
 
@@ -48,6 +51,7 @@ file.write("Hello, World!\n")
 file.write("This is a new line.")
 file.close()
 
+#---------------------------#
 Using the 'with' Statement
     The 'with' statement ensures that the file is properly closed after its suite finished, 
 even if an exception is raised.
@@ -58,7 +62,7 @@ with open("example.txt", "r") as file:
     content = file.read()
     print(content)
 
-
+#---------------------------#
 Small Example:
 
 # Writing to a file

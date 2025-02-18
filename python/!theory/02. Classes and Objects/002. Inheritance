@@ -1,10 +1,12 @@
     Inheritance
 
+#---------------------------#
 Definition
     Inheritance allows a class (called the child class) to inherit attributes and 
 methods from another class (called the parent class). This promotes code reuse and
 can make a program easier to maintain.
 
+#---------------------------#
 Syntax
     You define a child class by specifying the parent class in parentheses after 
 the child class name.
@@ -29,6 +31,7 @@ class ChildClass(ParentClass):
     def display_age(self):
         print(f"I am {self.age} years old.")
 
+#---------------------------#
 Using Inheritance
     You create an instance of the child class and call its methods, including those 
 inherited from the parent class.
@@ -41,6 +44,7 @@ child = ChildClass("Alice", 10)
 child.greet()  # Inherited method
 child.display_age()  # Child class method
 
+#---------------------------#
 Method Overriding
     The child class cand override methods from the parent class. To do this, define 
 a method in the child class with the same name as the method in the parent class.
@@ -58,7 +62,7 @@ class ChildClass(ParentClass):
 child = ChildClass()
 child.greet()  # Calls the overridden method in the child class
 
-
+#---------------------------#
 Small example:
 
 class Animal:

@@ -1,3 +1,6 @@
+    Modules and Packages
+
+#---------------------------#
 Modules
     A module is a file containing Python definitions and statements. It helps organize
 related functions, classes, and variables into a single file. You can import a module 
@@ -11,6 +14,7 @@ def greet(name):
 def add(a, b):
     return a + b
 
+#---------------------------#
 You can import and use this module in another script:
 # main.py
 import my_module
@@ -18,6 +22,7 @@ import my_module
 print(my_module.greet("Alice"))
 print(my_module.add(3, 5))
 
+#---------------------------#
 Packages
 A package is a collection of related modules organized in directories. Each package 
 contains a special '__init__.py' file to indicate that the directory is a package. This
@@ -44,6 +49,7 @@ from my_package import module1, module2
 print(module1.greet("Alice"))
 print(module2.add(3, 5))
 
+#---------------------------#
     Small Example:
 
 Here's a small example demonstrating modules and packages:
