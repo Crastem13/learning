@@ -1,0 +1,54 @@
+#---------------------------#
+    List Comprehensions
+#---------------------------#
+    Definition
+List comprehensions provide a concise way to create lists. They consist of brackets containing 
+an expression followed by a 'for' clause, and optionally, 'if' clauses. They can replace the 
+need for loops and 'map()' functions.
+
+    Syntax
+The basic syntax for a list comprehension is:
+
+[expression for item in iterable if condition]
+
+    Example:
+# Create a list of squares of even numbers from 0 to 9
+squares = [x**2 for x in range(10) if x % 2 == 0]
+print(squares)  # Output: [0, 4, 16, 36, 64]
+
+#---------------------------#
+    Generator Expressions
+#---------------------------#
+    Definitions
+Generator expressions are similar top list comprehensions, but they use parentheses instead of 
+brackets and return a generator object, which produces items only when needed (lazily 
+evaluated).
+
+    Syntax
+The basic syntax for a generator expression is:
+
+(expression for item in iterable if condition)
+
+    Example
+# Create a generator for squares of even numbers from 0 to 9
+squares_gen = (x**2 for x in range(10) if x % 2 == 0)
+
+# Iterate over the generator
+for square in squares_gen:
+    print(square)
+
+#---------------------------#
+    Small example
+#---------------------------#
+
+# List comprehension to create a list of squares of even numbers
+squares_list = [x**2 for x in range(10) if x % 2 == 0]
+print("List comprehension:", squares_list)
+
+# Generator expression to create a generator for squares of even numbers
+squares_gen = (x**2 for x in range(10) if x % 2 == 0)
+print("Generator expression:", list(squares_gen))  # Convert to list to display the values
+
+
+This script demonstrates the creation of a list using list comprehension and a generator 
+using a generator expression.
