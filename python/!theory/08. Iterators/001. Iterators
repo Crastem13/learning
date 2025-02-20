@@ -1,0 +1,97 @@
+#---------------------------#
+    Iterators
+#---------------------------#
+Definition:
+An iterator is an object that allows you to traverse through all the elements of a 
+collection (like a list or a tuple). Iterators implement two main methods: '__iter__()' 
+and '__next__()'.
+
+Creating an Iterator:
+Any object with an '__iter__()' method that returns an iterator object and a 
+'__next__()' method is considered an iterator.
+
+Example:
+
+my_list = [1, 2, 3]
+iterator = iter(my_list)
+
+print(next(iterator)) # Output: 1
+print(next(iterator)) # Output: 2
+print(next(iterator)) # Output: 3
+
+#---------------------------#
+    Generators
+#---------------------------#
+Definition:
+A generatoris a special type of iterator tyhat simplifies the creation of iterators.
+They allow you to define an iterator using a function and the 'yield' statement instead
+of returning a value.
+
+Creating a Generator:
+You define a generator function using the 'def' keyword and one or more 'yield' statements.
+Each time 'yield' is called, the generator produces a new value and suspends its state.
+
+Example:
+
+def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+gen = countdown(5)
+
+for value in gen:
+    print(value)
+
+In this example, the countdown generator function yields numbers from n does to 1.
+
+#---------------------------#
+    Generator Expressions
+#---------------------------#
+Similar to list comprehensions, you can create a generator using a generator expression
+with parentheses.
+
+Example:
+
+gen_exp = (x**2 for x in range(5))
+
+for value in gen_exp:
+    print(value)
+
+#---------------------------#
+    Small Example
+#---------------------------#
+Here's a small example demonstrating iterators and generators:
+
+# Iterator
+class MyRange:
+    def __init__(self, start, end):
+        self.current = start
+        self.end = end
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.current < self.end:
+            value = self.current
+            self.current += 1
+            return value
+        else:
+            raise StopIteration
+
+my_iter = MyRange(1, 5)
+
+for number in my_iter:
+    print(number)
+
+# Generator
+def my_generator():
+    for i in range(1, 5):
+        yield i
+
+for number in my_generator():
+    print(number)
+
+This script demonstrates creating an iterator using a class and a generator using a 
+function.
