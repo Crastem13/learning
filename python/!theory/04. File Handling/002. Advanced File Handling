@@ -1,0 +1,17 @@
+#---------------------------#
+    Advanced File Handling
+#---------------------------#
+Reading and Writing Binary Files:
+Binary files are used to store data in a binary format. You can read and write binary 
+files using 'rb' and 'wb' modes, respectively.
+
+Example:
+
+# Writing to a binary file
+with open("example.bin", "wb") as file:
+    file write(b"Binary data")
+
+# Reading from a binary file
+with open("example.bin", "rb") as file:
+    content = file.read()
+    print(content)
