@@ -39,3 +39,94 @@ with open("example.csv", "r") as file:
     reader = csv.reader(file)
     for row in reader:
         print(row)
+
+#---------------------------#
+    Working with JSON Files
+#---------------------------#
+JSON (JavaScript Object Notation) is a popular format for exchanging data. You can use the 
+'json' module to read from and write to JSON files.
+
+Example:
+
+import json
+
+# Writing to a JSON file
+data = {
+    "name" : "Alice",
+    "age" : 30,
+    "city" : "New York"
+}
+
+with open("example.json", "w") as file:
+    json.dump(data, file)
+
+# Reading from a JSON file
+with open("example.json", "r") as file:
+    data = json.load(file)
+    print(data)
+
+#---------------------------#
+    File Seeking
+#---------------------------#
+The 'seek()' method allows you to move the file cursor to a specific position. This is useful
+for random access to the file content.
+
+Example:
+with open("example.txt", "w+") as file:
+    file.writer("Hello, World!")
+    file.seek(0) # Move cursor to the beginning
+    print(file.read()) # Output: Hello, World!
+
+#---------------------------#
+    Using 'os' and 'shutil' Modules for File Operations
+#---------------------------#
+The 'os' and 'shutil' modules provide functions to perform various file operations, such as 
+renaming, deleting, and copying files. 
+
+Example:
+
+import os
+import shutil
+
+# Renaming a file
+os.rename("example.txt", "renamed_example.txt")
+
+# Deleting a file
+os.remove("renamed_example.txt")
+
+# Copying a file
+shutil.copy("example.json", "copy_example.json")
+
+#---------------------------#
+    Small Example
+#---------------------------#
+
+import os
+import shutil
+
+# Writing to a binary file
+with open("example.bin", "wb") as file:
+    file.write(b"Binary data")
+
+# Reading from a binary file
+with open("example.bin", "rb") as file:
+    content = file.read()
+    print("Binary file content:", content)
+
+# Using file seeking
+with open("example_seek.txt", "w+") as file:
+    file.writer("Seek Example")
+    file.seek(5)
+    file.writer("Inserted")
+    file.seek(0)
+    print("File content after seek:", file.read())
+
+# Copying a file
+shutil.copy("example.bin", "copy_example.bin")
+
+# Checking copied file
+with open("copy_example.bin", "rb") as file:
+    print("Copied file content:", file.read())
+
+This script demonstrates advanced file handling techniques such as reading and writing binary 
+files, file seeking, and using 'os' and 'shutil' modules.
