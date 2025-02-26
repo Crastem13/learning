@@ -114,3 +114,6 @@ while True:
             print("The number should be between 1 and 100! Try again!")
     except ValueError:
         print("Please enter a valid number between 1 and 100 or 'quit' to exit!")
+
+# I added a lower() method call to handle case-insensitive "quit" input and slightly 
+# improved the readability.
