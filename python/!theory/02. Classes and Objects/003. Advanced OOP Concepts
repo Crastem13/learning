@@ -1,0 +1,124 @@
+#---------------------------#
+    Advanced OOP Concepts
+#---------------------------#
+
+#---------------------------#
+    Encapsulation
+#---------------------------#
+Encapsulation is the bundling of data (attributes) and methods that operate on the data into 
+a single unit(class). It also involves restricting direct access to some of the object's 
+components, which can be achieved using private and protected members.
+
+- Private Members: Denoted by a double underscore '__', making them inaccessible from outside 
+the class.
+- Protected Members: Denoted by a single underscore '_', indicating that they are intended to 
+be accessed only within the class and its subclasses.
+
+Example:
+
+class MyClass:
+    def __init__(self, value):
+        self._protected = value # protected member
+        self.__private = value # private member
+
+    def get_private(self):
+        return self.__private
+
+obj = MyClass(10)
+
+print(obj._protected)   # Accessible, but not recommended
+print(obj.get_private()) # Accessing private member via a method
+
+#---------------------------#
+    Polymorphism
+#---------------------------#
+
+Polymorphism allows methods to do different things based on the object it is acting upon, even if
+they share the same name. This can be achieved through method overriding and method overloading.
+
+- Method Overriding: Redefining a method in a child class that is already defined in the parent class.
+
+Example:
+
+class Animal:
+    def make_sound(self):
+        return "Some sound"
+
+class Dog(Animal):
+    def make_sound(self)
+        return "Bark"
+
+class Cat(Animal):
+    def make_sound(self)
+        return "Meow"
+
+animals = [Dog(), Cat(), Animal()]
+for animal in animals:
+    print(animal.make_sound())
+
+#---------------------------#
+    Inheritance
+#---------------------------#
+
+We've previously covered inheritance. Here's a quick reminder: inheritance allows a child class to 
+inherit attributes and methods from a parent class.
+
+Multiple Inheritance:
+    - is when a class can inherit from more than one parent class.
+
+Example:
+
+class ClassA:
+    def method_a(self):
+        print("Method A")
+
+class ClassB:
+    def method_b(self):
+        print("Method B")
+
+class ClassC(ClassA, ClassB):
+    pass
+
+obj = ClassC()
+obj.method_a()
+obj.method_b()
+
+#---------------------------#
+    Small Example
+#---------------------------#
+
+class Vehicle:
+    def __init__(self, make, model):
+        self._make = make
+        self.__model = model    # Private member
+
+    def get_model(self):
+        return self.__model
+
+    def start(self):
+        return "Vehicle is starting"
+
+class Car(Vehicle):
+    def start(self):
+        return "Car is starting"
+
+class Motorcycle(Vehicle):
+    def start(self):
+        return "Vehicle is starting"
+
+class Hybrid(Car, Motorcycle):
+    def start(self):
+        return "Hybrid is starting"
+        
+# Testing the classes
+my_car = Car("Toyota", "Corolla")
+print(my_car.start())
+print(my_car.get_model())
+
+my_motorcycle = Motorcycle("Honda", "CBR")
+print(my_motorcycle.start())
+print(my_motorcycle.get_model())
+
+my_hybrid = Hybrid("Tesla", "Model X")
+print(my_hybrid.start())
+print(my_hybrid._make())
