@@ -1,0 +1,52 @@
+#---------------------------#
+    Metaprogramming
+#---------------------------#
+
+Definition:
+Metaprogramming refers to the capability of a program to manipulate itself or other programs as its data.
+It allows you to write code that can modify, generate, or inspect other code. In Python, metaprogramming 
+can be achieved using metaclasses, decorators and introspection
+
+#---------------------------#
+    Metaclasses
+#---------------------------#
+
+Definition:
+A metaclass is a class of a class. It defines how a class behaves. A class in Python is an instance of a 
+metaclass. The default metaclass in Python is 'type', but you can define your own metaclass to customize 
+class creation.
+
+Creating a Metaclass
+To create a metaclass, you define a class that inherits from 'type'.
+
+Example:
+
+class MyMeta(type):
+    def __new__(cls, name, bases, dct):
+        print(f"Creating class {name}")
+        return super().__new__(cls, name, bases, dct)
+
+class MyClass(metaclass=MyMeta):
+    def __init__(self, value):
+        self.value = value
+
+    def display(self):
+        print(f"Value: {self.value}")
+
+# Creating an instance of MyClass
+obj = MyClass(10)
+obj.display()
+
+In this example, the 'MyMeta' metaclass overrides the '__new__' method to customize class creation. When 
+'MyClass' is defined, the 'MyMeta' metaclass's '__new__' method is called.
+
+#---------------------------#
+    Introspection
+#---------------------------#
+
+Introspection is the ability of a program to examine the type or properties of an object at runtime. Python
+provides several built-in functions for introspection, such as 'type()', 'isinstance()', 'hasattr()' and 
+'dir()'
+
+Example:
+

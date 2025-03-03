@@ -1,0 +1,41 @@
+#---------------------------#
+    Context Managers
+#---------------------------#
+
+Definition
+A context manager is a Python object that provides a way to allocate and release resources precisely 
+when you want to. The most common way to manage resources in Python is by using the 'with' statement.
+
+Creating a Context Manager
+You can create a context manager using a class that implements the '__enter__' and '__exit__' methods.
+
+Example:
+
+class MyContextManager:
+    def __enter__(self):
+        print("Entering the context")
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        print("Exiting the context")
+
+with MyContextManager():
+    print("Inside the context")
+
+Alternatively, you can use the 'contextlib' module to create a context manager using the 'contextmanager' 
+decorator.
+
+#---------------------------#
+    Small Example
+#---------------------------#
+
+from contextlib import contextmanager
+
+@contextmanager
+def my_context_manager():
+    print("Entering the context")
+    yield
+    print("Exiting the context")
+
+with my_context_manager():
+    print("Inside the context")
