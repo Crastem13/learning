@@ -50,3 +50,17 @@ provides several built-in functions for introspection, such as 'type()', 'isinst
 
 Example:
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating an instance of Person
+p = Perdon("Alice", 30)
+
+# Introspection examples
+print(type(p)) # Output: <class '__main__.Person'>
+print(isinstance(p, Person)) # Output: True
+print(hasattr(p, 'name')) # Output: True
+print(getattr(p, 'age')) # Output: 30
+print(dir(p)) # Output: List of attributes and methods

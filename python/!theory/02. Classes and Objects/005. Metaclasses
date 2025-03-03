@@ -1,0 +1,106 @@
+#---------------------------#
+    Metaclasses
+#---------------------------#
+
+Definition:
+A metaclass is a class of a class that defines how a class behaves. A class is itself an instance 
+of a metaclass. Metaclasses are mostly used for creating APIs, modifying class creation, or adding 
+custom behaviors to classes.
+
+Default Metaclass:
+In Python, the default metaclass is 'type'. When you define a class, it is an instance of the 
+'type' metaclass.
+
+Example:
+___________________________________________________________________________________________________
+class MyClass:
+pass
+
+print(type(MyClass)) # Output: <class 'type'>
+___________________________________________________________________________________________________
+
+Creating a Custom Metaclass:
+You can create a custom metaclass by inheriting from 'type' and overriding its methods. The main 
+methods you may want to override are:
+
+__new__(cls, name, bases, attrs): Called to create the class. It takes the class, name base classes,
+and attributes as arguments.
+__init__(cls, name, bases, attrs): Called to initialize the class after it has been created.
+
+Example:
+___________________________________________________________________________________________________
+class MyMeta(type):
+    def __new__(cls, name, bases, attrs):
+        print(f"Creating class {name}")
+        return super().__new__(cls, name, bases, attrs)
+
+    def __init__(cls, name, bases, attrs):
+        print(f"Initializing class {name}")
+        super().__init__(name, bases, attrs)
+
+class MyClass(metaclass=MyMeta):
+    pass
+
+print(type(MyClass)) # Output: <class '__main__.MyMeta'>
+___________________________________________________________________________________________________
+
+In this example, the 'MyMeta' metaclass is used to create anbd initialize the 'MyClass' class. The print
+statemens in the '__new__' and '__init__' methods demonstrate the order in which these methods are called.
+
+Applying Custom behavior
+You can use a metaclass to add or modify class attributes and methods dynamically during class creation.
+
+Example:
+___________________________________________________________________________________________________
+class UpperCaseAttributesMeta(type):
+    def __new__(cls, name, bases, attrs):
+        uppercase_attrs = {
+            key.upper(): value for key, value in attrs.items() if not key.startswith('__')
+        }
+        return super().__new__(cls, name, bases, uppercase_attrs)
+
+class MyClass(metaclass=UpperCaseAttributesMeta):
+    attribute = "value"
+
+print(hasattr(MyClass, 'attribute')) # Output: False
+print(hasattr(MyClass, 'ATTRIBUTE')) # Output: True
+___________________________________________________________________________________________________
+
+In this example, the 'UpperCaseAttributesMeta' metaclass modifies class attributes by converting their 
+names to uppercase during class creation.
+
+#---------------------------#
+    Small Example
+#---------------------------#
+
+Here's a small example demonstrating the use of a custom metaclass to add logging functionality to 
+class methods:
+___________________________________________________________________________________________________
+class LoggingMeta(type):
+    def __new__(cls, name, bases, attrs):
+        for key, value in attrs.items():
+            if callable(value) and not key.startswith('__'):
+                original_func = value
+                def logged_func(*args, **kwargs):
+                    print(f"Calling {key} with arguments {args} and {kwargs}")
+                    result = original_func(*args, **kwargs)
+                    print(f"{key} returned {result}")
+                    return result
+                attrs[key] = logged_func
+        return super().__new__(cls, name, bases, attrs)
+
+class MyClass(metaclass=LoggingMeta):
+    def add(self, a, b):
+        return a + b
+    
+    def multiply(self, a, b):
+        return a * b
+
+# Creating an instance and calling methods
+obj = MyClass()
+print(obj.add(3, 5))
+print(obj.multiply(4, 6))
+___________________________________________________________________________________________________
+
+This script defines a 'LoggingMeta' metaclass that adds logging to class methods, demonstrating how 
+metaclasses can be used to enhance class behavior dynamically.
