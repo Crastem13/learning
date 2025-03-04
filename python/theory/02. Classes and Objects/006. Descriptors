@@ -1,0 +1,105 @@
+#---------------------------#
+    Descriptors
+#---------------------------#
+
+Definition:
+A descriptor is an object that customizes the behavior of attribute access (getting, setting, or 
+deleting) in another object. Descriptors are implemented by defining any opf the following methods 
+in a class:
+
+1. __get__(self, instance, owner): Defines behavior for retrieving an attribute.
+2. __set__(self, instance, value): Defines behavior for setting an attribute.
+3. __delete__(self, instance): Defines behavior for deleting an attribute.
+
+Types of Descriptors
+- Data Descriptors: Implement both '__get__' and '__set__' or '__delete__'. They can control both 
+access and mutation.
+- Non-Data Descriptors: Implement only '__get__'. They control only access. 
+
+Simple Example
+___________________________________________________________________________________________________
+class MyDescriptor:
+    def __get__(self, instance, owner):
+        print(f"Getting attribute from {instance} (owner: {owner})")
+        return instance.__dict__.get("_value", None)
+
+    def __set__(self, instance, value):
+        print(f"Setting attribute to {value} for {instance}")
+        instance.__dict__["_value"] = Value
+
+    def __delete__(self, instance):
+        print(f"Deleting attribute from {instance}")
+        del instance.__dict__["_value"]
+
+class MyClass:
+    attribute = MyDescriptor()
+
+obj = MyClass()
+obj.attribute = 42 # Setting
+print(obj.attribute) # Getting
+del obj.attribute # Deleting
+___________________________________________________________________________________________________
+
+The Role of Descriptors in Properties and Methods
+Descriptors are the backbone of Python's built-in '@property' decorator, which creates managed 
+attributes. Likewise, methods (including 'staticmethod' and 'classmethod') use descriptors internally.
+
+Advanced Use Case
+Let's raise the bar with an example of descriptors for data validation:
+___________________________________________________________________________________________________
+class NonNegative:
+    def __get__(self, instance, owner):
+        return instance.__dict__.get(self.name, 0)
+
+    def __set__(self, instance, value):
+        if value < 0:
+            raise ValueError(f"Cannot set a negative value for {self.name}")
+        instance.__dict__[self.name] = value
+
+    def __set_name__(self, owner, name):
+        self.name = name # Automatically captures the attribute name
+
+class Account:
+    balance = NonNegative()
+
+    def __init__(self, balance):
+        self.balance = balance
+
+# Testing
+account = Account(100)
+print(account.balance)
+account.balance = 50
+print(account.balance)
+try:
+    account.balance = -10
+exccept ValueError as e:
+    print(e)
+___________________________________________________________________________________________________
+
+Here, the 'NonNegative' descriptor ensures that the balance attribute in the 'Account' class cannot 
+be set to a negative value. It also uses the '__set_name__' method introduced in Python 3.6 to 
+automatically assign the descriptor's attribute name.
+
+Small Example
+
+To see descriptors in action, here's a concise use of a descriptor for computed attributes:
+___________________________________________________________________________________________________
+class celsius_to_fahrenheit:
+    def __get__(self, instance, owner):
+        return (instance._celsius * 9/5) + 32
+
+class Temperature:
+    def __init__(self, celsius):
+        self._celsius = celsius
+
+    fahrenheit = celsius_to_fahrenheit() # Descriptor for computed attribute
+
+# Testing
+temp = Temperature(25)
+print(temp.fahrenheit) # Output: 77.0
+___________________________________________________________________________________________________
+
+In this example, the 'celsius_to_fahrenheit' descriptor calculates the Fahrenheit equivalent of a 
+temperature in Celsius dynamically when accessed.
+
+Descriptors are a complex but extremely powerful tool when building frameworks or libraries.
