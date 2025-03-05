@@ -21,4 +21,25 @@ In this example:
     - 'await' pauses the coroutine until the result is available(e.g., waiting for 'asyncio.sleep(1)')
 
 Event Loop
-An event loop is the core of asynchronous 
+An event loop is the core of asynchronous programming. It manages and executes coroutines, tasks, and 
+callbacks. The 'asyncio.run()' function creates an event loop and runs the given coroutine until it is 
+complete.
+
+Tasks
+Tasks allow you to schedule coroutines to run concurrently. You can use 'asyncio.create_task()' to 
+create tasks.
+
+Example:
+___________________________________________________________________________________________________
+import asyncio
+
+async def task1():
+    print("Task 1: Starting")
+    await asyncio.sleep(2)
+    print("Task 1: Completed")
+
+async def task2():
+    print("Task 2: Starting")
+    await asyncio.sleep(1)
+    print("Task 2: Completed")
+___________________________________________________________________________________________________
