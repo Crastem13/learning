@@ -1,0 +1,24 @@
+#---------------------------#
+    Coroutines and Asynchronous Programming
+#---------------------------#
+
+Introduction to Coroutines
+A coroutine is a special type of function that can be paused and resumed during its execution. 
+Coroutines are declared using the 'async def' syntax and are used to write asynchronous code.
+
+Example:
+___________________________________________________________________________________________________
+import asyncio
+
+async def say_hello():
+    print("Hello!")
+    await asyncio.sleep(1) # Pauses execution here
+    print("World!")
+___________________________________________________________________________________________________
+
+In this example:
+    - 'async def' declares a coroutine.
+    - 'await' pauses the coroutine until the result is available(e.g., waiting for 'asyncio.sleep(1)')
+
+Event Loop
+An event loop is the core of asynchronous 
