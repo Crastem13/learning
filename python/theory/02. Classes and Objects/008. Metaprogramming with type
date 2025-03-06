@@ -1,0 +1,58 @@
+#---------------------------#
+    Metaprogramming with 'type'
+#---------------------------#
+
+Python's 'type' is not just used to check the type of an object, but it can also be used to dynamically 
+create classes at runtime.
+
+Dynamically Creating Classes
+You can use 'type' to create a class programmatically. The syntax is:
+___________________________________________________________________________________________________
+type(class_name, bases, attributes)
+___________________________________________________________________________________________________
+
+    - 'class_name': The name of the class to create.
+    - 'bases': A tuple of base classes the new class will inherit from.
+    - 'attributes': A dictionary of attributes and methods for the new class.
+
+Example:
+___________________________________________________________________________________________________
+# Dynamically creating a class
+attributes = {
+    "greet": lambda self: f"Hello, my name is {self.name}",
+    "__init__": lambda self, name: setattr(self, "name", name)
+}
+
+DynamicPerson = type("DynamicPerson", (object,), attributes)
+
+# Using the dynamically created class
+person = DynamicPerson("Alice")
+print(person.greet())   # Output: Hello, my name is Alice
+___________________________________________________________________________________________________
+
+#---------------------------#
+    Manipulating Class Creation with '__new__' and "__init__"
+#---------------------------#
+
+Overriding '__new__'
+'__new__' is a special method in Python responsible for creating new instances of a class. You can override 
+it to control the creation process.
+
+Example:
+___________________________________________________________________________________________________
+class Singleton:
+    _instances = {}
+
+    def __new__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super().__new__(cls)
+        return cls._instances[cls]
+
+# Testing Singleton
+a = Singleton()
+b = Singleton()
+print(a is b) # Output: True (both refer to the same instance)
+___________________________________________________________________________________________________
+
+In this example, the 'Singleton' class ensures that only one instance of the class can exist.
+

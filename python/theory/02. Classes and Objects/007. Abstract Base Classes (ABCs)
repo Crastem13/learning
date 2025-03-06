@@ -1,0 +1,144 @@
+#---------------------------#
+    Abstract Base Classes (ABCs)
+#---------------------------#
+
+Definition:
+Abstract Base Classes are a way to define a blueprint for other classes. They enforce that derived 
+(child) classes implement certain methods, ensuring consistency in design and behavior. Abstract Base 
+Classes are defined in the 'abc' module. 
+
+ABCs are particularly useful when workin on large applications or frameworks where multiple developers 
+or components rely on the same interface.
+
+Key Components of ABCs
+    - 'abc.ABC': The base class to create abstract base classes.
+    - '@abstractmethod': A decorator used to mark methods as abstract. These methods must be implemented 
+    by any non-abstract subclass.
+
+Example:
+___________________________________________________________________________________________________
+from abc import ABC,abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def are(self):
+        pass
+    
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def are(self):
+        return 3.14159 * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * 3.14159 * self.radius
+
+# Testing
+shapes = [Rectangle(4, 5), Circle(3)]
+for shape in shapes:
+    print(f"Area: {shape.area()}, Perimeter: {shape.perimeter()}")
+___________________________________________________________________________________________________
+
+In this example:
+    - The 'Shape' class defines an interface for shapes using abstract methods.
+    - 'Rectangle' and 'Circle' are concrete classes that implement the 'area' and 'perimeter' methods
+
+Enforcing Method Consistency
+If a subclass doesn't implement all abstract methods, Python raises a 'TypeError', ensuring no incomplete 
+implementation.
+
+#---------------------------#
+    Advanced Use Case
+#---------------------------#
+
+Let's raise the stakes with a more sophisticated use case where ABCs are leveraged to create a plugin system.
+
+Example:
+___________________________________________________________________________________________________
+from abc import ABC, abstractmethod
+
+class Plugin(ABC):
+    @abstractmethod
+    def execute(self, data):
+        pass
+
+class JSONPlugin(Plugin):
+    def execute(self, data):
+        import json
+        return json.dumps(data)
+
+class XMLPlugin(Plugin):
+    def execute(self, data):
+        import xml.etree.ElementTree as ET
+        root = ET.Element("root")
+        for key, value in data.items():
+            child = ET.SubElement(root, key)
+            child.text = str(value)
+        return ET.tostring(root, encoding='unicode')
+
+# Plugin execution framework
+def run_plugin(plugin: Plugin, data):
+    print("Running plugin...")
+    print(plugin.execute(data))
+
+# Testing with plugin
+data = {"name": "Alice", "age": 30}
+json_plugin = JSONPlugin()
+xml_plugin = XMLPlugin()
+
+run_plugin(json_plugin, data)
+run_plugin(xml_plugin, data)
+___________________________________________________________________________________________________
+
+In this example:
+    - The 'Plugin' ABC defines a common interface for plugins.
+    - 'JSONPlugin' and 'XMLPlugin' implement the 'execute' method for JSON and XML serialization, respectively
+    - The 'run_plugin' function accepts any plugin conforming to the Plugin ABC.
+
+#---------------------------#
+    Small Example
+#---------------------------#
+___________________________________________________________________________________________________
+from abc import ABC, abstractmethod
+
+class Logger(ABC):
+    @abstractmethod
+    def log(self, message):
+        pass
+
+class ConsoleLogger(Logger):
+    def log(self, message):
+        print(f"[Console]: {message}")
+
+class FileLogger(Logger):
+    def __init__(self, filename):
+        self.filename = filename
+
+    def log(self, message):
+        with open(self.filename, "a") as file:
+            file.write(f"{message}\n")
+
+# Using the loggers
+loggers = [ConsoleLogger(), FileLogger("log.txt")]
+for logger in loggers:
+    logger.log("This is a log message")
+___________________________________________________________________________________________________
+
+This script demonstrates the versatility of ABCs in enforcing a consistent 'log' interface across 
+different logging implementations.
