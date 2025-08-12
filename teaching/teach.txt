@@ -1,0 +1,16 @@
+MANUAL TESTING
+
+- munca manuala pe care tu o faci ca sa testezi cerintele
+- numar de teste, taskuri special create
+- sa intelegi cum se foloseste aplicatia
+- si sa incerci lucruri nepermise
+- slavery
+
+AUTOMATED TESTING
+
+- python
+- javascript
+- java (MAVEN)
+- c/c++/c# (.NET)
+
+- creezi scripturi pe care le rulezi incat sa testezi atat performanta cat si functionalitatea aplicatiei
